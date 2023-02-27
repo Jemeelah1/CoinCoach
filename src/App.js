@@ -1,11 +1,28 @@
 import "./App.css";
-import Footer from "./Components/Footer"; 
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import LandingPage from "./Components/LandingPage";
+import Contact from "./Components/Contact";
+import SignIn from "./Components/SignIn";
+import Donations from "./Components/Donations";
+import Academy from "./Components/Academy";
+import Fullscreen from "./Fullscreen";
+import Sponsor from "./Sponsor";
 
 function App() {
   return (
-    <div className="App">
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Fullscreen />}>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/academy' element={<Academy />} />
+        </Route>
+        <Route element={<Sponsor />}>
+          <Route path='/donation' element={<Donations />} />
+        </Route>
+        <Route path='/signin' element={<SignIn />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

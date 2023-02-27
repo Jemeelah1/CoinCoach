@@ -1,11 +1,11 @@
 import React from "react";
-import background from "../Assets/png/Sign-in.png";
+import background from "../Assets/Svgs/SignIn.svg";
 
 function SignIn() {
     return (
       <>
-          <div style={{ backgroundImage: `url(${background})`, backgroundSize: "cover", backgroundPosition: 'center',}}>
-                <h1 className="text-2xl">This Ecommerce Application will be built by Team Intel</h1>
+          <div style={{ backgroundImage: `url(${background})`, backgroundSize: "cover", backgroundPosition: 'center', height: '100vh'}}>
+            <h1>Hello</h1>    
           </div>
       </>
     );

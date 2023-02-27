@@ -1,5 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../Assets/Pngs/CoinCoach.png";
+import ig from "../Assets/Pngs/Instagram.png";
+import tweet from "../Assets/Pngs/twitter-ic.png";
+import youTube from "../Assets/Pngs/youtube-ic.png";
+import fb from "../Assets/Pngs/facebook-ic.png";
 
 function Footer() {
   return (
@@ -10,6 +15,20 @@ function Footer() {
             <p className=" text-3xl my-auto font-semibold pb-5 ">
               <img src={logo} alt="logo" />
             </p>
+            <div className="flex justify-between">
+              <Link to="https://instagram.com/coincoach_?igshid=ZDdkNTZiNTM=" className="text-white">
+                <img src={ig} alt="instagram" />
+              </Link>
+              <Link to="/contact" className="text-white">
+                <img src={fb} alt="facebook" />
+              </Link>
+              <Link to="https://mobile.twitter.com/CoachCoin" className="text-white">
+                <img src={tweet} alt="twitter" />
+              </Link>
+              <Link to="https://www.youtube.com/@coincoach2667" className="text-white">
+                <img src={youTube} alt="youtube" />
+              </Link>
+            </div>
           </div>
           <div className="pb-24 pt-10">
             <h2 class="mb-6 text-l font-semibold text-gray-500 uppercase dark:text-gray-400">
