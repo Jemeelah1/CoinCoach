@@ -16,7 +16,6 @@ import about6 from "../Assets/Pngs/About6.png";
 import group from "../Assets/Pngs/GroupPic.png";
 
 function LandingPage() {
-  // const { state: { user: { firstName } } } = state?.user();
   return (
     <div>
       <div className="bg-primary text-white">
@@ -59,7 +58,9 @@ function LandingPage() {
           </p>
         </div>
         <div className="bg-orange text-white rounded-md text-center shadow-md mt-4 p-2 w-48">
-          <input type="button" value=" Explore Academy Now" />
+          <Link to="/academy">
+            <input type="button" value=" Explore Academy Now" />
+          </Link>
         </div>
       </div>
 
@@ -90,9 +91,12 @@ function LandingPage() {
               in <br /> the one place.
             </li>
             <li>
-              <a href="/" className="hover:underline pt-5 text-xs text-orange">
+              <Link
+                to="/donation"
+                className="hover:underline pt-5 text-xs text-orange"
+              >
                 See Explained
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -133,9 +137,9 @@ function LandingPage() {
               <br /> always uptodate.
             </li>
             <li>
-              <a href="/" className="hover:underline pt-5 text-xs text-orange">
+              <Link to="/" className="hover:underline pt-5 text-xs text-orange">
                 See Explained
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -155,9 +159,9 @@ function LandingPage() {
               <br /> friendly to newbie.
             </li>
             <li>
-              <a href="/" className="hover:underline pt-5 text-xs text-orange">
+              <Link to="/academy" className="hover:underline pt-5 text-xs text-orange">
                 See Explained
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -291,13 +295,17 @@ function LandingPage() {
             title="video"
           />
           <h1 className="text-xl text-l font-bold">
-            What is Cryptocurrency<br />Explained For Beginners
+            What is Cryptocurrency
+            <br />
+            Explained For Beginners
           </h1>
           <p>Understanding crypto charts</p>
           <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
             <Link to="/" className="text-white">
-              <input type="button" value="Save for Later"
-              onClick={() => alert('Saving...')}
+              <input
+                type="button"
+                value="Save for Later"
+                onClick={() => alert("Saving...")}
               />
             </Link>
           </div>

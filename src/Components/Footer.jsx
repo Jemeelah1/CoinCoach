@@ -51,9 +51,9 @@ function Footer() {
                 </a>
               </li>
               <li class="mb-4">
-                <a href="/" className="hover:underline">
+                <Link to="https://technology4dev-my.sharepoint.com/:w:/g/personal/ruke_ejegreh_womentechsters_org/EW6C4-2_aBVIjjBtXL-b2fYBz3DFRC8qAWJZp1FoiGprtg?e=4wh6Ut" className="hover:underline">
                   Legal & Privacy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -68,9 +68,9 @@ function Footer() {
                 </a>
               </li>
               <li class="mb-4">
-                <a href="/" className="hover:underline">
-                  Buy Crypto
-                </a>
+                <Link to="/donation" className="hover:underline">
+                  Donate Coin
+                </Link>
               </li>
               <li class="mb-4">
                 <a href="/" className="hover:underline">
@@ -95,9 +95,9 @@ function Footer() {
                 </a>
               </li>
               <li class="mb-4">
-                <a href="/" className="hover:underline">
-                  Crypto Basic
-                </a>
+                <Link to="https://docs.google.com/document/d/1fG_am56eU1hKS-b86DwwFz2OpNA2m7otRodux_kjCvU/edit?usp=drivesdk" className="hover:underline">
+                  Glossary
+                </Link>
               </li>
               <li class="mb-4">
                 <a href="/" className="hover:underline">

@@ -5,6 +5,8 @@ import Contact from "./Components/Contact";
 import SignIn from "./Components/SignIn";
 import Donations from "./Components/Donations";
 import Academy from "./Components/Academy";
+import AboutUs from "./Components/AboutUs";
+import Vidoe from "./Components/Vidoe";
 import Fullscreen from "./Fullscreen";
 import Sponsor from "./Sponsor";
 
@@ -16,6 +18,8 @@ function App() {
           <Route path='/' element={<LandingPage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/academy' element={<Academy />} />
+          <Route path='/aboutus' element={<AboutUs />} />
+          <Route path='/vidoe' element={<Vidoe />} />
         </Route>
         <Route element={<Sponsor />}>
           <Route path='/donation' element={<Donations />} />

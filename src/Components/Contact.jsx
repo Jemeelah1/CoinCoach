@@ -2,6 +2,19 @@ import React from "react";
 import contactpic from "../Assets/Pngs/ContactPic.png";
 
 const Contact = () => {
+  const [formStatus, setFormStatus] = React.useState("Send");
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setFormStatus("Submitting...");
+    const { name, email, message } = e.target.elements;
+    let conFom = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    console.log(conFom);
+  };
+
   return (
     <div>
       {/* 1st SECTION */}
@@ -12,7 +25,7 @@ const Contact = () => {
       </div>
 
       {/* 2nd SECTION */}
-      <div className="space-y-4 mt-20 mb-20 justify-center items-center mx-96 text-center">
+      <div className="space-y-4 mt-20 mb-10 justify-center items-center mx-96 text-center">
         <h1 className="text-4xl font-bold">We would love to hear from you</h1>
         <p className="text-xl">
           Feel free to contact us anytime. we will get back to you as soon as we
@@ -21,52 +34,46 @@ const Contact = () => {
       </div>
 
       {/* 3rd SECTION */}
-      <div className=" pb-20">
-        <div className="className">
-          {/* name */}
-          <div className="className">
-            <label for="name">Name</label>
-            <input
-              className="border-primary rounded-md py-3 pl-10  p-10 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm border"
-              type="text"
-              placeholder="Enter your name" required
-            />
+      <div className="mt-2 mb-20 justify-center items-center">
+        <form onSubmit={onSubmit}>
+          <div className="mt-5 mx-auto space-x-20 space-y-10 flex justify-center items-center">
+          <div className="space-y-10">
+            <div className="mb-3 space-y-4">
+              <label className="form-label" htmlFor="name">
+                NAME
+              </label><br />
+              <input className="form-control border w-96 h-10 p-2 rounded-md" type="text" placeholder="Enter your name" required />
+            </div>
+            <div className="mb-3 space-y-4">
+              <label className="form-label" htmlFor="email">
+                EMAIL
+              </label><br />
+              <input
+                className="form-control border w-96 h-10 p-2 rounded-md"
+                type="email"
+                placeholder="Enter your email"
+                id="email"
+                required
+              />
+            </div>
+            <div className="mb-3 space-y-4">
+              <label className="form-label" htmlFor="email">
+                PHONE NUMBER
+              </label><br />
+              <input className="form-control border w-96 h-10 p-2 rounded-md" type="tel" id="phone" placeholder="+234000000000" required />
+            </div>
           </div>
-
-          {/* email */}
-          <div className="className">
-            <label for="name">Email</label>
-            <input
-              className="border-primary rounded-md py-3 pl-10  p-10 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm border"
-              type="email"
-              placeholder="Enter your email" required
-            />
+          <div className="mb-3 space-y-4">
+            <label className="form-label" htmlFor="message">
+              SEND US A MESSAGE
+            </label><br />
+            <textarea className="form-control border h-80 w-96 p-2 rounded-md" id="message" placeholder="Write us a message" required />
           </div>
-
-          {/* phone number */}
-          <div className="className">
-            <label for="name">Phone Number</label>
-            <input
-              className="border-primary rounded-md py-3 pl-10  p-10 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm border"
-              type="tel"
-              placeholder="Enter your Phone number" required
-            />
           </div>
-        </div>
-        {/* text area */}
-        <div className="">
-          <label for="name">Send us a message</label>
-          <input
-            className="border-primary rounded-md py-3 pl-10  p-10 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm border"
-            type="textarea" cols="30" rows="10"
-            placeholder="Write something...." required
-          />
-        </div>
-
-        {/* button */}
-        <div className="bg-orange rounded-md shadow-md mt-4 p-2 w-32 text-white mx-96 text-center">
-          <input type="button" value="Submit" />
-        </div>
+          <button className="bg-orange rounded-md text-center shadow-md mt-6 p-2 pl-7 w-24 text-white mb-20 flex items-center mx-auto" type="submit">
+            {formStatus}
+          </button>
+        </form>
       </div>
     </div>
   );
