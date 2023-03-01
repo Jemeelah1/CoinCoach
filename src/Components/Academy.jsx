@@ -1,28 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import academypic from "../Assets/Pngs/GroupA.png";
 import coinAcademy from "../Assets/Pngs/coinAcademy.png";
 import { Link } from "react-router-dom";
+import about3 from "../Assets/Pngs/About3.png";
+import about4 from "../Assets/Pngs/About4.png";
+import about5 from "../Assets/Pngs/About5.png";
+import about6 from "../Assets/Pngs/About6.png";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Academy = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
+
   return (
     <div>
       {/* 1st SECTION */}
-      <div className=" text-xs pt-20">
-        <p className=" ml-90 ">
+      <div className="md:flex-row flex-col text-xs pt-20">
+        <p data-aos="fade-left" data-aos-duration="1500" className=" ml-90 ">
           <img src={coinAcademy} alt="logo" className="ml-36" />
         </p>
       </div>
 
       {/* 2nd SECTION */}
-      <div className="w-screen">
-        <p className=" text-3xl font-semibold pt-5 pb-5 w-w-5/6 flex justify-center items-center">
+      <div className="w-screen md:flex-row flex-col">
+        <p data-aos="fade-left" data-aos-duration="1500" className=" text-3xl font-semibold pt-5 pb-5 w-w-5/6 flex justify-center items-center">
           <img src={academypic} alt="contact" className="w-5/6 flex" />
         </p>
       </div>
 
       {/* Article */}
-      <div className="text-xl justify-center items-center space-y-4 mx-36 pt-10 pb-10">
+      <div data-aos="fade-right" data-aos-duration="1500" className="md:flex-row flex-col text-xl justify-center items-center space-y-4 mx-36 pt-10 pb-10">
         <p>
           Your ultimate guide to navigating the exciting world of
           cryptocurrency!
@@ -48,7 +59,7 @@ const Academy = () => {
       </div>
 
       {/* Vidoes */}
-      <div>
+      <div data-aos="fade-In" data-aos-duration="1500">
         <div className="pb-4 flex space-x-4 mr-72 justify-end">
           <Link to="/vidoe">
             <p>
@@ -56,7 +67,7 @@ const Academy = () => {
             </p>
           </Link>
         </div>
-        <div className="flex justify-center items-center mb-20 space-x-12">
+        <div className="flex md:flex-row flex-col justify-center items-center mb-20 space-x-12">
           {/* div 1 */}
           <div className="bg-grey2 p-10 rounded-md">
             <iframe
@@ -75,7 +86,7 @@ const Academy = () => {
               <br /> informations on cryptocurrency.
             </p>
             <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
-              <Link to="/contact" className="text-white">
+              <Link to="/contact" className="text-white hover:text-primary">
                 <input type="button" value="Watch now" />
               </Link>
             </div>
@@ -99,7 +110,7 @@ const Academy = () => {
               <br /> use of Blockchain.
             </p>
             <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
-              <Link to="/contact" className="text-white">
+              <Link to="/contact" className="text-white hover:text-primary">
                 <input type="button" value="Watch now" />
               </Link>
             </div>
@@ -123,7 +134,7 @@ const Academy = () => {
               <br /> watching Coin Coach content
             </p>
             <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
-              <Link to="/" className="text-white">
+              <Link to="/" className="text-white hover:text-primary">
                 <input type="button" value="Watch now" />
               </Link>
             </div>
@@ -132,7 +143,7 @@ const Academy = () => {
       </div>
 
       {/* Article */}
-      <div>
+      <div data-aos="fade-In" data-aos-duration="1500">
         <div className="pb-4 flex space-x-4 mr-72 justify-end">
           <Link to="/article">
             <p>
@@ -140,6 +151,21 @@ const Academy = () => {
             </p>
           </Link>
         </div>
+        <div data-aos="fade-right" data-aos-anchor-placement="top-bottom"
+              data-aos-duration="1500" className=" flex justify-center items-center mb-20 space-x-6">
+            <a href="/" className="hover:underline pt-5 text-xs text-orange">
+              <img src={about3} alt="about" />
+            </a>
+            <a href="/" className="hover:underline pt-5 text-xs text-orange">
+              <img src={about4} alt="about" />
+            </a>
+            <a href="/" className="hover:underline pt-5 text-xs text-orange">
+              <img src={about5} alt="about" />
+            </a>
+            <a href="/" className="hover:underline pt-5 text-xs text-orange">
+              <img src={about6} alt="about" />
+            </a>
+          </div>
       </div>
     </div>
   );

@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import visionpic from "../Assets/Pngs/vision.png";
 import approachpic from "../Assets/Pngs/approach.png";
 import processpic from "../Assets/Pngs/process.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutUs = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
+
   return (
-    <div>
+    <div className="md:flex-row flex-col">
       {/* 1st SECTION */}
       <div className="items-center mx-96 mt-20 mb-10 text-center">
-        <h1 className="text-4xl font-semibold">About Us</h1>
+        <h1 data-aos="fade-right" data-aos-duration="1500" className="text-4xl font-semibold">About Us</h1>
       </div>
 
       {/* 2nd SECTION */}
-      <div className="container flex flex-wrap items-center space-x-72 ml-72 mx-auto pb-6 pt-6 ">
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" className="container flex flex-wrap items-center space-x-72 ml-72 mx-auto pb-6 pt-6 ">
         <div className="pb-48">
           <h1 className="text-3xl font-semibold pb-3 text-center">Our Vision</h1>
           <p className="text-xl">
@@ -29,7 +36,7 @@ const AboutUs = () => {
       </div>
 
       {/* 3rd SECTION */}
-      <div className="container flex flex-wrap items-center space-x-72 ml-72 mx-auto pb-6 pt-6 ">
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" className="container flex flex-wrap items-center space-x-72 ml-72 mx-auto pb-6 pt-6 ">
         <div className=" my-auto font-semibold pb-5 ">
           <img src={approachpic} alt="logo" className="max-h-96 w-auto" />
         </div>
@@ -53,7 +60,7 @@ const AboutUs = () => {
       </div>
 
       {/* 4th SECTION */}
-      <div className="container flex flex-wrap items-center space-x-72 ml-72 mx-auto pb-6 pt-6 ">
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" className="container flex flex-wrap items-center space-x-72 ml-72 mx-auto pb-6 pt-6 ">
         <div className="pb-48">
           <h1 className="text-3xl font-semibold items-center pb-3 text-center">Our Goal</h1>
           <p className="text-xl">

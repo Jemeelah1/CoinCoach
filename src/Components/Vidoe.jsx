@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Vidoe = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
+
   return (
     <>
       <div className="py-10 px-60 flex justify-center space-x-14">
@@ -12,7 +20,7 @@ const Vidoe = () => {
           <Button variant="">Articles</Button>
         </ButtonGroup>
       </div>
-      <div className="flex justify-center items-center mt-20 mb-20 space-x-6">
+      <div data-aos="fade-left" data-aos-duration="2000" className="flex md:flex-row flex-col justify-center items-center mt-20 mb-20 space-x-6">
         {/* div 1 */}
         <div className="bg-grey2 p-10 rounded-md">
           <iframe
@@ -28,7 +36,7 @@ const Vidoe = () => {
           </h1>
           <p>Understanding crypto charts</p>
           <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
-            <Link to="/contact" className="text-white">
+            <Link to="/contact" className="text-white hover:text-primary">
               <input type="button" value="Save for Later" />
             </Link>
           </div>
@@ -49,7 +57,7 @@ const Vidoe = () => {
           </h1>
           <p>Understanding crypto charts</p>
           <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
-            <Link to="/contact" className="text-white">
+            <Link to="/contact" className="text-white hover:text-primary">
               <input type="button" value="Save for Later" />
             </Link>
           </div>
@@ -70,7 +78,7 @@ const Vidoe = () => {
           </h1>
           <p>Understanding crypto charts</p>
           <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
-            <Link to="/" className="text-white">
+            <Link to="/" className="text-white hover:text-primary">
               <input type="button" value="Save for Later" />
             </Link>
           </div>
@@ -92,7 +100,7 @@ const Vidoe = () => {
           </h1>
           <p>Understanding crypto charts</p>
           <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
-            <Link to="/" className="text-white">
+            <Link to="/" className="text-white hover:text-primary">
               <input
                 type="button"
                 value="Save for Later"
@@ -102,7 +110,7 @@ const Vidoe = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center mb-20 space-x-12">
+      <div className="flex md:flex-row flex-col justify-center items-center mb-20 space-x-12">
         {/* div 0 */}
         <div className="bg-grey2 p-10 rounded-md">
           <iframe
@@ -121,7 +129,7 @@ const Vidoe = () => {
             <br /> informations on cryptocurrency.
           </p>
           <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
-            <Link to="/contact" className="text-white">
+            <Link to="/contact" className="text-white hover:text-primary">
               <input type="button" value="Save for Later" />
             </Link>
           </div>
@@ -145,7 +153,7 @@ const Vidoe = () => {
             <br /> of Blockchain and Cryptocurrency.
           </p>
           <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
-            <Link to="/contact" className="text-white">
+            <Link to="/contact" className="text-white hover:text-primary">
               <input type="button" value="Save for Later" />
             </Link>
           </div>
@@ -169,7 +177,7 @@ const Vidoe = () => {
             <br /> use of Blockchain.
           </p>
           <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
-            <Link to="/contact" className="text-white">
+            <Link to="/contact" className="text-white hover:text-primary">
               <input type="button" value="Save for Later" />
             </Link>
           </div>
@@ -193,12 +201,37 @@ const Vidoe = () => {
             <br /> watching Coin Coach content
           </p>
           <div className="bg-orange rounded-md text-center shadow-md mt-4 p-2 w-32">
-            <Link to="/" className="text-white">
+            <Link to="/" className="text-white hover:text-primary">
               <input type="button" value="Save for Later" />
             </Link>
           </div>
         </div>
       </div>
+
+      <Box className="bg-yellow pb-5 pt-1 mt-2 px-6">
+        {/* 1st SECTION */}
+        <div data-aos="fade-right" data-aos-duration="1500" className="items-center mx-96 mt-20 mb-10 text-center">
+          <h1 className="text-4xl font-semibold">Become a Coach</h1>
+          <p className="text-xl">
+            Join our tutors to share your knowledge on blockchain
+            <br /> technology with enthusiastic learners and earn our
+            <br />
+            <span className="text-orange font-extrabold text-2xl">COIN</span>
+            <span className="text-primary font-extrabold text-2xl">
+              COACH
+            </span>{" "}
+            coins.
+          </p>
+          <div className="bg-orange rounded-md text-center shadow-md mt-6 p-4 pl-7 w-48 text-white mb-20 flex items-center mx-auto">
+            <Link
+              to="https://docs.google.com/forms/d/1MQ-lLMSx88T3BIj7vrH0Hh6w04Sh4L7Lmvm3AxtWIu4/edit"
+              className="text-white hover:text-primary"
+            >
+              <input type="button" value="Become a Coach" />
+            </Link>
+          </div>
+        </div>
+      </Box>
     </>
   );
 };

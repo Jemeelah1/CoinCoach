@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import contactpic from "../Assets/Pngs/ContactPic.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
+
   const [formStatus, setFormStatus] = React.useState("Send");
   const onSubmit = (e) => {
     e.preventDefault();
@@ -19,13 +26,13 @@ const Contact = () => {
     <div>
       {/* 1st SECTION */}
       <div className="w-screen">
-        <p className=" text-3xl my-auto font-semibold pb-5 w-full">
+        <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" className=" text-3xl my-auto font-semibold pb-5 w-full">
           <img src={contactpic} alt="contact" className="w-full" />
         </p>
       </div>
 
       {/* 2nd SECTION */}
-      <div className="space-y-4 mt-20 mb-10 justify-center items-center mx-96 text-center">
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" className="space-y-4 mt-20 mb-10 justify-center items-center mx-96 text-center">
         <h1 className="text-4xl font-bold">We would love to hear from you</h1>
         <p className="text-xl">
           Feel free to contact us anytime. we will get back to you as soon as we
@@ -34,7 +41,7 @@ const Contact = () => {
       </div>
 
       {/* 3rd SECTION */}
-      <div className="mt-2 mb-20 justify-center items-center">
+      <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="1500" className="mt-2 mb-20 justify-center items-center">
         <form onSubmit={onSubmit}>
           <div className="mt-5 mx-auto space-x-20 space-y-10 flex justify-center items-center">
           <div className="space-y-10">

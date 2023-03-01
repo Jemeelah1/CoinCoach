@@ -7,6 +7,10 @@ import Donations from "./Components/Donations";
 import Academy from "./Components/Academy";
 import AboutUs from "./Components/AboutUs";
 import Vidoe from "./Components/Vidoe";
+import Profile from "./Components/Profile";
+import Community from "./Components/Community";
+import Article from "./Components/Article";
+import Tools from "./Components/Tools";
 import Fullscreen from "./Fullscreen";
 import Sponsor from "./Sponsor";
 
@@ -20,6 +24,10 @@ function App() {
           <Route path='/academy' element={<Academy />} />
           <Route path='/aboutus' element={<AboutUs />} />
           <Route path='/vidoe' element={<Vidoe />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/community' element={<Community />} />
+          <Route path='/article' element={<Article />} />
+          <Route path='/tools' element={<Tools />} />
         </Route>
         <Route element={<Sponsor />}>
           <Route path='/donation' element={<Donations />} />

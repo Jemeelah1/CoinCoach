@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import background from "../Assets/Pngs/donationpic.png";
 import Typography from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
@@ -6,8 +6,15 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Checkbox from "@mui/material/Checkbox";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Donations = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
+
   const [formStatus, setFormStatus] = React.useState("Send");
   const onSubmit = (e) => {
     e.preventDefault();
@@ -39,7 +46,7 @@ const Donations = () => {
         }}
         className="flex justify-center items-center"
       >
-        <div>
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
           <Box
             sx={{
               width: 700,

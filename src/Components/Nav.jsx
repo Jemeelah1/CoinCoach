@@ -23,13 +23,13 @@ function Nav() {
           <NavLink to="/academy" style={active} className="text-white hover:text-orange">
             Academy
           </NavLink>
-          <NavLink to="/" style={active} className="text-white hover:text-orange">
+          <NavLink to="/tools" style={active} className="text-white hover:text-orange">
             Tools
           </NavLink>
-          <NavLink to="/" style={active} className="text-white hover:text-orange">
+          <NavLink to="/profile" style={active} className="text-white hover:text-orange">
             Profile
           </NavLink>
-          <NavLink to="/" style={active} className="text-white hover:text-orange">
+          <NavLink to="/community" style={active} className="text-white hover:text-orange">
             Community
           </NavLink>
           <NavLink to="/aboutus" style={active} className="text-white hover:text-orange">

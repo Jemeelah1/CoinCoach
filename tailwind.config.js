@@ -13,7 +13,15 @@ module.exports = {
       'white': '#ffffff',
       'grey': '#C2C2C2',
       'grey2': '#E0E0E0',
+      'yellow': '#F5DEAD',
     },
-  },
-  plugins: [],
+    screens: {
+      xs: "480px",
+      ss: "620px",
+      sm: "768px",
+      md: "1060px",
+      lg: "1200px",
+      xl: "1700px",
+    },
+  },  plugins: [],
 }
