@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "../Assets/Pngs/Datasecurity.png";
-import subtitle from "../Assets/Pngs/Subtitle.png";
+import subtitle from "../Assets/Pngs/Subtitle1.png";
 import img1 from "../Assets/Pngs/feature-image1.png";
 import img2 from "../Assets/Pngs/feature-image2.png";
 import img3 from "../Assets/Pngs/feature-image3.png";
@@ -34,8 +34,8 @@ const style = {
 };
 
 const style2 = {
-  color: 'white',
-}
+  color: "white",
+};
 
 function LandingPage() {
   useEffect(() => {
@@ -170,12 +170,13 @@ function LandingPage() {
             <img src={img1} alt="image1" />
           </p>
           <h2 class="mb-4 text-l font-semibold text-gray-500 uppercase dark:text-gray-400">
-            Invest in coincoach
+            Donate in coincoach
           </h2>
           <ul class="text-gray-500 dark:text-gray-400">
             <li>
-              Buy and sell popular digital <br /> currencies, keep track of them
-              in <br /> the one place.
+              Support our CoinCoach platform to
+              <br /> provide easy Blockchain and <br />
+              Cryptocurrency learning
             </li>
             <li>
               <Link
@@ -198,8 +199,10 @@ function LandingPage() {
           </h2>
           <ul class="text-gray-500 dark:text-gray-400">
             <li>
-              All cash balances are covered by
-              <br /> FDIC insurance, up to a<br /> maximum of $250,000.
+              Your personal data shared on
+              <br /> our platform is safe with
+               us!<br /> Cyber security is updated
+              <br /> regularly
             </li>
             <li>
               <a href="/" className="hover:underline pt-5 text-xs text-orange">
