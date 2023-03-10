@@ -280,29 +280,29 @@ function LandingPage() {
       >
         <div className="space-y-6 ">
           <div className=" container flex items-center mx-auto  px-8 space-x-4">
-            <a href="/" className="hover:underline pt-5 text-xs text-orange">
+            <Link to="https://www.momint.so/learn-about-nfts?utm_source=Google+Search+Ad&utm_medium=CPC&utm_campaign=Search+Ad+|+What+Are+NFTs+(Africa)" className="hover:underline pt-5 text-xs text-orange">
               <img src={nfts} alt="about" />
-            </a>
-            <a href="/" className="hover:underline pt-5 text-xs text-orange">
+            </Link>
+            <Link to="https://www.kaspersky.com/resource-center/definitions/what-is-cryptocurrency" className="hover:underline pt-5 text-xs text-orange">
               <img src={about1} alt="about" />
-            </a>
-            <a href="/" className="hover:underline pt-5 text-xs text-orange">
+            </Link>
+            <Link to="https://thebitcoinmanual.com/articles/what-is-coin-control/" className="hover:underline pt-5 text-xs text-orange">
               <img src={about2} alt="about" />
-            </a>
+            </Link>
           </div>
           <div className=" container flex items-center mx-auto px-8  space-x-4 ">
-            <a href="/" className="hover:underline pt-5 text-xs text-orange">
+            <Link to="https://www.cryptovantage.com/guides/setting-up-crypto-wallet/" className="hover:underline pt-5 text-xs text-orange">
               <img src={about3} alt="about" />
-            </a>
-            <a href="/" className="hover:underline pt-5 text-xs text-orange">
+            </Link>
+            <Link to="/aboutus" className="hover:underline pt-5 text-xs text-orange">
               <img src={about4} alt="about" />
-            </a>
-            <a href="/" className="hover:underline pt-5 text-xs text-orange">
+            </Link>
+            <Link to="https://www.getearlybird.io/blog/is-crypto-safe" className="hover:underline pt-5 text-xs text-orange">
               <img src={about5} alt="about" />
-            </a>
-            <a href="/" className="hover:underline pt-5 text-xs text-orange">
+            </Link>
+            <Link to="https://unbanked.com/defi-the-wild-west-of-crypto/#:~:text=DeFi%20is%20called%20the%20Wild,of%20middlemen%20or%20complicated%20paperwork." className="hover:underline pt-5 text-xs text-orange">
               <img src={about6} alt="about" />
-            </a>
+            </Link>
           </div>
           <a
             href="/"
