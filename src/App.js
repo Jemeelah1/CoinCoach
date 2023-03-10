@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import LandingPage from "./Components/LandingPage";
 import Contact from "./Components/Contact";
 import SignIn from "./Components/SignIn";
+import SignUp from "./Components/SignUp";
 import Donations from "./Components/Donations";
 import Academy from "./Components/Academy";
 import AboutUs from "./Components/AboutUs";
@@ -13,6 +14,7 @@ import Article from "./Components/Article";
 import Tools from "./Components/Tools";
 import Fullscreen from "./Fullscreen";
 import Sponsor from "./Sponsor";
+import Verification from "./Components/Verification";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
           <Route path='/donation' element={<Donations />} />
         </Route>
         <Route path='/signin' element={<SignIn />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/verification' element={<Verification />} />
       </Routes>
     </BrowserRouter>
   );
