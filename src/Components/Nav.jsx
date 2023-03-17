@@ -35,6 +35,9 @@ function Nav() {
           <NavLink to="/aboutus" style={active} className="text-white hover:text-orange">
             About us
           </NavLink>
+          <NavLink to="/signin" style={active} className="text-white hover:text-orange">
+            Sign-In / Sign-up
+          </NavLink>
         </div>
       </div>
     </div>

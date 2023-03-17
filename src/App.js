@@ -15,6 +15,8 @@ import Tools from "./Components/Tools";
 import Fullscreen from "./Fullscreen";
 import Sponsor from "./Sponsor";
 import Verification from "./Components/Verification";
+import VidArticle from "./Components/VidArticle";
+import ForgotPassword from "./Components/ForgotPassword";
 
 function App() {
   return (
@@ -30,12 +32,14 @@ function App() {
           <Route path='/community' element={<Community />} />
           <Route path='/article' element={<Article />} />
           <Route path='/tools' element={<Tools />} />
+          <Route path='/vidarticle' element={<VidArticle />} />
         </Route>
         <Route element={<Sponsor />}>
           <Route path='/donation' element={<Donations />} />
         </Route>
         <Route path='/signin' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
+        <Route path='/forgot' element={<ForgotPassword />} />
         <Route path='/verification' element={<Verification />} />
       </Routes>
     </BrowserRouter>

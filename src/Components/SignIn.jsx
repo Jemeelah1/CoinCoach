@@ -107,12 +107,12 @@ function SignIn() {
                 </div>
 
                 <div className="text-end pb-4 hover-underline">
-                    <Link>
-                      <span className="text-orange text-md">
-                        Forgot Password?
-                      </span>
-                    </Link>
-                  </div>
+                  <Link to="/forgot">
+                    <span className="text-orange text-md">
+                      Forgot Password?
+                    </span>
+                  </Link>
+                </div>
 
                 <div>
                   <button
@@ -145,6 +145,12 @@ function SignIn() {
               </form>
               <ToastContainer />
             </div>
+          </div>
+          {/* go back link */}
+          <div className="text-center mt-6 text-orange items-center mx-auto hover-underline">
+            <Link to="/" className="text-orange hover-underline pb-10">
+              <p>Go Back</p>
+            </Link>
           </div>
         </Box>
       </div>
